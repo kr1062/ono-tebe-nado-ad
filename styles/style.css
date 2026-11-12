@@ -1,1 +1,264 @@
-/* место для вашего кода */
+body {
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Шапка и подвал: общие блоки */
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.nav-list li + li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 13px;
+  vertical-align: middle;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.contacts {
+  font-style: normal;
+}
+
+.contacts-link {
+  display: block;
+}
+
+/* Шапка */
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 97px 50px;
+}
+
+.logo {
+  display: flex;
+  width: 130px;
+}
+
+.header-contacts {
+  justify-self: end;
+  max-width: 220px;
+  margin-right: 19px;
+}
+
+/* Обложка */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 755px;
+  padding: 155px 50px 48px;
+  color: #fff;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/cover.jpg") center / cover no-repeat;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  margin-right: -0.3em;
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 1.35;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.hero-title-line:nth-child(2) {
+  align-self: center;
+}
+
+.hero-title-line:nth-child(3) {
+  align-self: flex-end;
+}
+
+.hero-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  word-spacing: 0.65em;
+  text-transform: uppercase;
+}
+
+.hero-button {
+  padding: 12px 35px;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+  color: inherit;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+/* Заголовки секций */
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Лоты */
+
+.lots {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 91px 25px 100px;
+}
+
+.lots-title {
+  padding-left: 40px;
+}
+
+.lots-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.lot-card {
+  display: flex;
+  min-height: 594px;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+}
+
+.lot-card:nth-child(1) {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/card-lot-01.jpg");
+}
+
+.lot-card:nth-child(2) {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/card-lot-02.jpg");
+}
+
+.lot-card:nth-child(3) {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/card-lot-03.jpg");
+}
+
+.lot-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 56px 40px;
+}
+
+.lot-title {
+  font-size: 22px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.lot-text {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.lots-more {
+  align-self: flex-start;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+/* Об аукционе */
+
+.about {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 12px 70px;
+  padding: 0 25px 90px 70px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.about-logo {
+  width: 240px;
+  height: 240px;
+  padding: 51px;
+  object-fit: contain;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.about-title {
+  align-self: center;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+  gap: 24px;
+  max-width: 690px;
+}
+
+/* Подвал */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  padding: 100px 50px 50px;
+}
+
+.footer-contacts {
+  max-width: 260px;
+}
+
+.footer-nav-list {
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.footer-nav-list li + li::before {
+  content: none;
+}
+
+.social-list {
+  display: flex;
+  gap: 48px;
+  justify-self: end;
+  margin-right: 6px;
+}
+
+.social-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
